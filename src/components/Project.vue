@@ -1,5 +1,6 @@
 <template>
     <div class="project">
+      {{this.$route.params.project}}
       <p v-html="this.projectDescription">{{this.projectDescription}}</p>
     </div>
 </template>
@@ -15,6 +16,7 @@ export default {
     };
   },
   updated() {
+    console.log('updated');
     this.fetchData();
   },
   created() {
